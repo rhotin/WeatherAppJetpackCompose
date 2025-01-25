@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.google.dagger.hilt.android)
     id("kotlinx-serialization")
     kotlin("kapt")
@@ -8,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.rhappdeveloper.weatherapp"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.rhappdeveloper.weatherapp"
@@ -77,8 +78,4 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit2.kotlinx.serialization.converter)
     implementation(libs.okhttp)
-}
-
-kapt {
-    correctErrorTypes = true
 }
